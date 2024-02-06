@@ -46,7 +46,10 @@ module.exports = () => ({
         }
         fetch(args.path)
       })
-      return contents
+      return {
+        contents,
+        loader: 'js' // 这里假设加载的内容是JS代码，根据你的具体需求修改
+      };
     })
   }
 })
